@@ -4,7 +4,7 @@ import React, {useContext} from 'react'
 import Smurf from './Smurf'
 
 //Context
-import {SmurfContext} from '../context'
+import {SmurfContext} from '../context/SmurfContext'
 
 
 export default function Smurfs() {
@@ -13,7 +13,11 @@ export default function Smurfs() {
 
     return (
         <div>
-            
+           {smurfs.map(smurf => 
+           <Smurf 
+           key={smurf.id} 
+           smurf={smurf}
+           />)} 
         </div>
     )
 }
